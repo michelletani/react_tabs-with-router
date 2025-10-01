@@ -1,15 +1,10 @@
 import { TabsList } from '../components/TabsList';
 import { tabs } from '../api/tabs';
-import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 export const TabsPage = () => {
   const { tabId } = useParams();
-  const [activeTabId, setActiveTabId] = useState(tabs[0].id);
-
-  useEffect(() => {
-    setActiveTabId(tabId || '');
-  }, [tabId]);
+  const activeTabId = tabId || ''; // derive direto da URL
 
   return (
     <>

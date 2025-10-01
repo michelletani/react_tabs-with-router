@@ -10,19 +10,15 @@ export const NavMenu: React.FC = () => {
     >
       <div className="container">
         <div className="navbar-brand">
-          <div>
-            <a
-              href="#/"
-              className={`navbar-item${location.pathname === '/' ? ' is-active' : ''}`}
-            >
+          <div className={location.pathname === '/' ? 'is-active' : ''}>
+            <Link to="/" className="navbar-item">
               Home
-            </a>
+            </Link>
           </div>
-          <div>
-            <Link
-              to="/tabs"
-              className={`navbar-item${location.pathname.startsWith('/tabs') ? ' is-active' : ''}`}
-            >
+          <div
+            className={location.pathname.startsWith('/tabs') ? 'is-active' : ''}
+          >
+            <Link to="/tabs" className="navbar-item">
               Tabs
             </Link>
           </div>
