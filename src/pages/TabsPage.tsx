@@ -1,6 +1,7 @@
-import { TabsList } from '../components/TabsList';
 import { tabs } from '../api/tabs';
 import { useParams } from 'react-router-dom';
+import { TabsList } from '../components/TabsList';
+import 'mate-academy/react_tabs';
 
 export const TabsPage = () => {
   const { tabId } = useParams();
